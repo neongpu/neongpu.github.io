@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/post-list.css">
     <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/surf.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/og-default.jpg" | absURL }}{{ end }}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/og-default.jpg" | absURL }}{{ end }}" />
 </head>
 <body>
 
@@ -53,14 +71,14 @@
                     <li><a href="https://github.com/kalefetch">Github</a></li>
                 </ul>
 
-                <h2>Hits</h2>
-                <p>Check out how many hits this website has!</p>
-                <div id="sfc423pmnjd7ahshas6rxujgkzzzutnwc17"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=423pmnjd7ahshas6rxujgkzzzutnwc17&down=async" async></script><br><noscript><a href="https://www.freecounterstat.com" title="page counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=423pmnjd7ahshas6rxujgkzzzutnwc17" border="0" title="page counter" alt="page counter"></a></noscript>
+                <h2>Visits</h2>
+                <p>Check out how many visits this website has!</p>
+                <div id="sfczrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=zrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc&down=async" async></script><br><a href="https://www.freecounterstat.com">web counter</a><noscript><a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=zrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc" border="0" title="web counter" alt="web counter"></a></noscript>
             </div>
         </div>
         <div class="footer">
             <footer>
-                <p>© {{ now.Year }} — "don't copy me, plz."</p>
+                <p>Thanks for coming by! if you have time, sign the <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-40680-4f">guestbook</a>.</p>
             </footer>
         </div>
     </div>

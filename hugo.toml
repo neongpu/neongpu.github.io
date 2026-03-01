@@ -4,3 +4,6 @@ title = 'kalefetch'
 
 [permalinks]
 blog = "/blog/:slug/"
+
+[params]
+description = "Personal blog, projects, and other cool stuff."
