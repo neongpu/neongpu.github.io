@@ -1,10 +1,10 @@
-# kalefetch
+# neongpu
 
-This is my person website and blog!
+This is my personal website and blog!
 
-Check out [my website](https://kalefetch.github.io/) or read my [first blog post](https://kalefetch.github.io/blog/hi-there).
+Check out [my website](https://neongpu.github.io/) or read my [first blog post](https://neongpu.github.io/blog/hi-there).
 
 ---
 
-[![Kalefetch](https://kalefetch.github.io/share.gif)](https://kalefetch.github.io/)
-[![Kalefetch](https://kalefetch.github.io/share.png)](https://kalefetch.github.io/)
+[![Neongpu](https://neongpu.github.io/share.gif)](https://neongpu.github.io/)
+[![Neongpu](https://neongpu.github.io/share.png)](https://neongpu.github.io/)

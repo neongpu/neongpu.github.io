@@ -17,4 +17,4 @@ That's why I'm gonna stay away from all of that and just talk about what I'm wor
 
 (but hopefully not. :D)
 
-![Maruzensky thumbs up reaction](/images/reactions/maruzensky-thumbs-up.png)
+![Maruzensky thumbs up reaction](/img/reactions/maruzensky-thumbs-up.png)

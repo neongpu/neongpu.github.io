@@ -30,4 +30,4 @@ Anyways, I've been experimenting with SDL3, and also working on a small side pro
 
 Maybe it turns into a real game, or... maybe it doesn't. Either way, I have a memory leak to fix. :/
 
-![Bocchi bored reaction](/images/reactions/bocchi-bored.png)
+![Bocchi bored reaction](/img/reactions/bocchi-bored.png)

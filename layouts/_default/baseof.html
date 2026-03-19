@@ -5,85 +5,72 @@
     <title>{{ .Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/post-list.css">
-    <link rel="stylesheet" href="/css/post.css">
-    <link rel="stylesheet" href="/css/surf.css">
+    {{ $index := resources.Get "css/index.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $index.RelPermalink }}">
+
+    {{ $postList := resources.Get "css/post-list.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $postList.RelPermalink }}">
+
+    {{ $post := resources.Get "css/post.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $post.RelPermalink }}">
+
+    {{ $surf := resources.Get "css/surf.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $surf.RelPermalink }}">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="21x20" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/og-default.jpg" | absURL }}{{ end }}" />
+    <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "img/og-default.jpg" | absURL }}{{ end }}" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ .Title }}" />
     <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
-    <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/og-default.jpg" | absURL }}{{ end }}" />
-
-    <meta name="google-site-verification" content="SjiCGij-JEFfajtZuBknz3MxNUtlwa84DJndDjcC47k" />
+    <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "img/og-default.jpg" | absURL }}{{ end }}" />
 </head>
 <body>
-
     <div class="main">
-        <div class="navbar">
-            <div class="logo">
-                <a href="/"><img src="/images/sitebanner.png" alt="kalefetch" class="sitebanner"></a>
-            </div>
-            <nav>
-                <i>"Does anyone even make blogs anymore?"</i>
-            </nav>
+        <div class="banner">
+            <a href="/"><img src="/img/title.png" class="pixelart" /></a>
         </div>
-        <div class="page-content">
-            <div class="sidebar-left">
-                <ul>
-                    <li><a href="/">
-                        <img src="/images/icons/computer_icon.png" alt="Home" class="sidebar-icon">
-                        Home
-                    </a></li>
-                    <li><a href="/blog">
-                        <img src="/images/icons/book_icon.png" alt="Blog" class="sidebar-icon">
-                        Blog
-                    </a></li>
-                    <li><a href="/projects">
-                        <img src="/images/icons/folder_icon.png" alt="Projects" class="sidebar-icon">
-                        Projects
-                    </a></li>
-                    <li><a href="/surf">
-                        <div class="gif-container">
-                            <img src="/images/icons/globe_icon.png" alt="Surf" class="sidebar-icon">
-                            <img src="/images/icons/globe_icon_animated.gif" alt="Surf" class="sidebar-icon animated-icon">
-                        </div>
-                        Surf
-                    </a></li>
-                </ul>
-            </div>
-            <div class="main-content">
-                {{ block "main" . }}{{ end }}
-            </div> 
-            <div class="sidebar-right">
-                <h2>Links</h2>
-                <p>Back on the boring internet...</p>
-                <ul>
-                    <li><a href="https://youtube.com/@kalefetch">YouTube</a></li>
-                    <li><a href="https://github.com/kalefetch">Github</a></li>
-                </ul>
 
-                <h2>Visits</h2>
-                <p>Check out how many visits this website has!</p>
-                <div id="sfczrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=zrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc&down=async" async></script><br><a href="https://www.freecounterstat.com">web counter</a><noscript><a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=zrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc" border="0" title="web counter" alt="web counter"></a></noscript>
+        <div class="header">
+            <p><i>"Does anyone even make blogs anymore?"</i></p>
+            <a href="/">Home</a> • <a  href="/blog">Blog</a> • <a  href="/projects">Projects</a> • <a href="/surf">Surf!</a>
+        </div>
+        
+        <div class="container">
+            <div class="content">
+                {{ block "main" . }}{{ end }}
+            </div>
+
+            <div class="nav">
+                <div class="nav-section">
+                    <h2>Links</h2>
+                    <p>Back on the boring internet...</p>
+                    <ul class="list">
+                        <li><a href="https://youtube.com/@neongpu">YouTube</a></li>
+                        <li><a href="https://github.com/neongpu">Github</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h2>Visits</h2>
+                    <p>Check out how many visits this website has!</p>
+                    <div id="sfczrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=zrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc&down=async" async></script><br><a href="https://www.freecounterstat.com">web counter</a><noscript><a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=zrxh1m7ty2u6ue8j81b2hzfwfbyxl1nc" border="0" title="web counter" alt="web counter"></a></noscript>
+                </div>
             </div>
         </div>
+
         <div class="footer">
             <footer>
                 <p>Thanks for coming by! Take a minute to sign the <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-40680-4f">guestbook</a>.</p>
             </footer>
         </div>
     </div>
-
 </body>
 </html>

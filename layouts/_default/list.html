@@ -4,12 +4,12 @@
     Posts
     {{ with .OutputFormats.Get "RSS" }}
     <a href="{{ .RelPermalink }}" class="rss-button">
-        <img src="/images/icons/rss.svg" alt="RSS Feed" class="rss-icon">
+        <img src="/img/icons/rss.svg" alt="RSS Feed" class="rss-icon">
     </a>
     {{ end }}
 </h1>
 
-<ul class="post-list">
+<ul class="list">
     {{ range .Pages }}
     <li>
         <span class="date">{{ .Date.Format "2006-01-02" }}</span>

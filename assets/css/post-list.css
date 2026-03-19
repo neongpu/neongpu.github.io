@@ -1,0 +1,15 @@
+.rss-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.rss-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+}
+
+.rss-icon:hover {
+    opacity: 1;
+}

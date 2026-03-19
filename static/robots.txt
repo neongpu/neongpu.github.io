@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://kalefetch.github.io/sitemap.xml
+Sitemap: https://neongpu.github.io/sitemap.xml

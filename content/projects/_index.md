@@ -1,3 +1,3 @@
 +++
-title = 'kalefetch/projects'
+title = 'neongpu/projects'
 +++

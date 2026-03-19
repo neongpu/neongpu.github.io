@@ -1,6 +1,6 @@
-baseURL = 'https://kalefetch.github.io/'
+baseURL = 'https://neongpu.github.io'
 languageCode = 'en-us'
-title = 'kalefetch'
+title = 'neongpu'
 
 [permalinks]
 blog = "/blog/:slug/"
